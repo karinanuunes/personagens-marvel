@@ -10,22 +10,17 @@ import Type from "../Type";
 import Description from "../Description";
 import "./style.css";
 
-const Card = () => {
-  let hero = true;
-
+const Card = (props) => {
   return (
     <div className="card">
-      <Title title="Homem Aranha" />
-      <Image
-        src="https://cdn.awsli.com.br/600x700/1610/1610163/produto/177684974/poster-o-espetacular-homem-aranha-2-g-ebc6cbb4.jpg"
-        alt="Homem Aranha"
-      />
-      <Height height={1.6} />
-      <Age age={27} />
-      <Origin origin="Brasil" />
-      <Race race="Humana" />
-      <Type type={hero ? "Herói" : "Vilão"} />
-      <Description description="É homem e aranha" />
+      <Title title={props.title} />
+      <Image src={props.src} alt={props.alt} />
+      <Height height={props.height} />
+      <Age age={props.age} />
+      <Origin origin={props.origin} />
+      <Race race={props.race} />
+      <Type type={props.type} />
+      <Description description={props.description} />
     </div>
   );
 };
