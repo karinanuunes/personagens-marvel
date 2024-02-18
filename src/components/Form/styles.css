@@ -1,0 +1,33 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: 100%;
+  margin: 50px 500px;
+  padding: 50px;
+  border-radius: 25px;
+  background-color: #ffffff67;
+  box-shadow: 0 0 10px #0000001a;
+}
+
+label {
+  background-color: transparent;
+}
+
+input,
+textarea {
+  cursor: pointer;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+input:hover {
+  background-color: #e4ffe491;
+  transition: 0.3s ease-in-out;
+}
+
+select,
+textarea {
+  border: none;
+}
