@@ -1,13 +1,22 @@
 import React from "react";
 import "./App.css";
 import Card from "./components/Card";
+import Form from "./components/Form";
 
 const App = () => {
   let hero = true;
+  let verDetalhes = () => {
+    return console.log("Clicou");
+  };
+  let onDelete = () => {
+    return console.log("Deletou");
+  };
+
   return (
     <div className="App">
+      <Form />
       <Card
-        title="Homem Aranha"
+        name="Homem Aranha"
         src="https://cdn.awsli.com.br/600x700/1610/1610163/produto/177684974/poster-o-espetacular-homem-aranha-2-g-ebc6cbb4.jpg"
         alt="Homem Aranha"
         height={1.8}
@@ -16,9 +25,13 @@ const App = () => {
         race="Humano"
         type={hero ? "Herói" : "Vilão"}
         description="É homem e aranha"
+        onDetail={verDetalhes}
+        detail="Ver detalhes"
+        onDelete={onDelete}
+        delete="Deletar"
       />
       <Card
-        title="Capitão América"
+        name="Capitão América"
         src="https://i.pinimg.com/564x/91/00/7d/91007d0fe4e7ba58b213051e539dc70c.jpg"
         alt="Capitão América"
         height={1.9}
@@ -27,9 +40,13 @@ const App = () => {
         race="Humano"
         type={hero ? "Herói" : "Vilão"}
         description="Velho descongelado"
+        onDetail={verDetalhes}
+        detail="Ver detalhes"
+        onDelete={onDelete}
+        delete="Deletar"
       />
       <Card
-        title="Homem de Ferro"
+        name="Homem de Ferro"
         src="https://i.pinimg.com/564x/52/08/ac/5208ac301eb3fb378dc6b69a5e94c6ec.jpg"
         alt="Homem de Ferro"
         height={1.85}
@@ -38,6 +55,10 @@ const App = () => {
         race="Humano"
         type={hero ? "Herói" : "Vilão"}
         description="Velho rico"
+        onDetail={verDetalhes}
+        detail="Ver detalhes"
+        onDelete={onDelete}
+        delete="Deletar"
       />
     </div>
   );
