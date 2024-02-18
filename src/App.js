@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Card from "./components/Card";
 import Form from "./components/Form";
@@ -12,9 +12,35 @@ const App = () => {
     return console.log("Deletou");
   };
 
+  const [personagens, setPersonagens] = useState([]);
+
+  const handleFormSubmit = (personagem) => {
+    setPersonagens([...personagens, personagem]);
+    console.log(personagem);
+  };
+
   return (
     <div className="App">
-      <Form />
+      <Form onSubmit={handleFormSubmit} />
+
+      {personagens.map((personagem) => (
+        <Card
+          name={personagem.nome}
+          src={personagem.urlImagem}
+          alt={personagem.nome}
+          height={personagem.altura}
+          age={personagem.idade}
+          origin={personagem.origem}
+          race={personagem.raca}
+          type={personagem.tipo}
+          description={personagem.descricao}
+          onDetail={verDetalhes}
+          detail="Ver detalhes"
+          onDelete={onDelete}
+          delete="Deletar"
+        />
+      ))}
+
       <Card
         name="Homem Aranha"
         src="https://cdn.awsli.com.br/600x700/1610/1610163/produto/177684974/poster-o-espetacular-homem-aranha-2-g-ebc6cbb4.jpg"
