@@ -43,17 +43,18 @@ const Form = ({ onSubmit }) => {
         type="text"
         value={nome}
         onChange={(e) => setNome(e.target.value)}
+        minLength={3}
         required
       />
       <label>Altura:</label>
       <input
-        type="text"
+        type="number"
         value={altura}
         onChange={(e) => setAltura(e.target.value)}
       />
       <label>Idade:</label>
       <input
-        type="text"
+        type="number"
         value={idade}
         onChange={(e) => setIdade(e.target.value)}
       />
@@ -80,6 +81,7 @@ const Form = ({ onSubmit }) => {
       <textarea
         value={descricao}
         onChange={(e) => setDescricao(e.target.value)}
+        maxLength={24}
         required
       />
       <label>URL da Imagem:</label>
