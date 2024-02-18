@@ -15,7 +15,10 @@ const Card = (props) => {
   return (
     <div className="card">
       <Name name={props.name} />
-      <Image src={props.src} alt={props.alt} />
+      <Image
+        src={props.src.length > 14 ? props.src : "https://iili.io/JEUVMxt.png"}
+        alt={props.alt}
+      />
       <Height height={props.height ? props.height + " metros" : "Indefinida"} />
       <Age age={props.age ? props.age + " anos" : "Indefinida"} />
       <Origin origin={props.origin} />
@@ -31,12 +34,13 @@ const Card = (props) => {
 export default Card;
 
 // Card.propTypes = {
-//   title: PropTypes.string.isRequired,
+//   name: PropTypes.string.isRequired,
 //   height: PropTypes.number.isRequired,
 //   age: PropTypes.number,
 //   origin: PropTypes.string.isRequired,
 //   race: PropTypes.string,
 //   type: PropTypes.bool.isRequired,
+//   description: PropTypes.string.isRequired,
 //   image: PropTypes.string.isRequired,
 // };
 
