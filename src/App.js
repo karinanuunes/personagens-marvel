@@ -16,6 +16,9 @@ const App = () => {
 
   const handleFormSubmit = (personagem) => {
     setPersonagens((personagens) => [...personagens, personagem]);
+    let listaDePersonagens = [...personagens];
+    listaDePersonagens.push(personagem);
+    console.log(listaDePersonagens);
   };
 
   return (
