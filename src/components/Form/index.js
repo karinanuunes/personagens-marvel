@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 
-const Form = () => {
+const Form = ({ onSubmit }) => {
   const [nome, setNome] = useState("");
   const [altura, setAltura] = useState("");
   const [idade, setIdade] = useState("");
@@ -13,7 +13,7 @@ const Form = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log({
+    onSubmit({
       nome,
       altura,
       idade,

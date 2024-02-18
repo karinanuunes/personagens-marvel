@@ -15,16 +15,16 @@ const App = () => {
   const [personagens, setPersonagens] = useState([]);
 
   const handleFormSubmit = (personagem) => {
-    setPersonagens([...personagens, personagem]);
-    console.log(personagem);
+    setPersonagens((personagens) => [...personagens, personagem]);
   };
 
   return (
     <div className="App">
       <Form onSubmit={handleFormSubmit} />
 
-      {personagens.map((personagem) => (
+      {personagens.map((personagem, index) => (
         <Card
+          key={index}
           name={personagem.nome}
           src={personagem.urlImagem}
           alt={personagem.nome}
