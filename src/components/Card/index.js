@@ -16,10 +16,10 @@ const Card = (props) => {
     <div className="card">
       <Name name={props.name} />
       <Image src={props.src} alt={props.alt} />
-      <Height height={props.height} />
-      <Age age={props.age} />
+      <Height height={props.height ? props.height + " metros" : "Indefinida"} />
+      <Age age={props.age ? props.age + " anos" : "Indefinida"} />
       <Origin origin={props.origin} />
-      <Race race={props.race} />
+      <Race race={props.race ? props.race : "Indefinida"} />
       <Type type={props.type} />
       <Description description={props.description} />
       <Button onClick={props.onDetail} label={props.detail} />
