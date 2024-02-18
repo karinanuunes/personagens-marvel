@@ -3,6 +3,8 @@
   flex-direction: column;
   gap: 3px;
   width: 100%;
+  min-width: 400px;
+  max-width: 500px;
   margin: 50px 500px;
   padding: 50px;
   border-radius: 25px;
@@ -15,16 +17,21 @@ label {
 }
 
 input,
-textarea {
+textarea,
+select {
   cursor: pointer;
-  border: none;
+  border: 1px solid #e6e6e667;
+  outline: 1px solid #e9ffde67;
   padding: 5px 10px;
   border-radius: 5px;
 }
 
-input:hover {
+input:hover,
+input:focus {
   background-color: #e4ffe491;
   transition: 0.3s ease-in-out;
+  border: 1px solid #b9b9b967;
+  outline: 1px solid #e9ffde67;
 }
 
 select,
