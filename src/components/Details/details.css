@@ -14,7 +14,7 @@ body {
 
 .details-card {
   background: white;
-  width: 300px;
+  width: 340px;
   display: inline-block;
   margin: 50px;
   border-radius: 15px;
@@ -27,7 +27,9 @@ body {
 }
 
 .image-card img {
-  width: 400px;
+  max-width: 240px;
+  max-height: 360px;
+  border-radius: 15px;
 }
 
 .tipo-card {
@@ -94,5 +96,5 @@ body {
 
 .button-card {
   background-color: #8bcf8b42;
-  padding: 5px 10px;
+  width: 100px;
 }
