@@ -2,6 +2,12 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 100%;
+  width: 100%;
   padding: 20px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }

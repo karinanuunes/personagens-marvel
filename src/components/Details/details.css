@@ -1,76 +1,98 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,900");
+
 * {
-  font-family: sans-serif;
+  box-sizing: border-box;
 }
 
-.cp-bg-img {
-
-  background-image: url("https://static.wixstatic.com/media/cf6239_281e020a71824815a9a2daa43751bf69~mv2.jpg/v1/fill/w_480,h_719,al_c,lg_1,q_80,enc_auto/cf6239_281e020a71824815a9a2daa43751bf69~mv2.jpg");
-}
-
-.char-page-container {
-  background: lightblue;
-  padding: 40px;
-  min-height: 900px;
-  width: 600px;
+body {
+  font: 14px/20px "Lato", Arial, sans-serif;
+  color: #6e6e6e;
+  margin-top: 30px;
   margin: auto;
-  border-radius: 20px;
-  box-shadow: 0px 0px 30px 15px black;
+  text-align: center;
 }
 
-.cp-opacity {
-  padding: 40px;
-  background: rgba(255, 255, 255, 0.267);
+.details-card {
+  background: white;
+  width: 300px;
+  display: inline-block;
+  margin: 50px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: -1px 15px 30px -12px #000000a2;
 }
 
-.cgreen {
-  background-image: linear-gradient(45deg, rgb(45, 121, 57), rgb(184, 255, 143), rgb(45, 121, 57));
-  /* color: white; */
+.image-card {
+  background-color: transparent;
 }
 
-.cred {
-  background-image: linear-gradient(45deg, rgb(183, 22, 22), rgb(255, 119, 119), rgb(183, 22, 22));
+.image-card img {
+  width: 400px;
 }
 
-.go-home-button {
-  width: 100%;
-  margin-top: 20px;
-  padding: 10px;
-  border-radius: 8px;
-  cursor: pointer;
-  justify-self: center;
-  background: linear-gradient(45deg, rgb(37, 52, 214), rgb(119, 205, 255), rgb(37, 52, 214));
-  font-size: 24px;
-  border: 1px solid rgb(0, 0, 0);
-  color: white;
-  font-weight: bolder;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+.tipo-card {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 3px;
+  background-color: transparent;
 }
 
-.charpage-img {
-  height: 694px;
-  width: 594px;
-  border: 3px solid rgb(0, 0, 0);
-  border-radius: 20px;
+.nome-card {
+  font-size: 26px;
+  color: black;
+  font-weight: 900;
+  margin-bottom: 5px;
 }
 
-.charpage-name {
-  font-size: 32px;
-  background: linear-gradient(45deg, rgb(37, 52, 214), rgb(119, 205, 255), rgb(37, 52, 214));
-  padding: 2px 5px;
-  border-radius: 8px;
-  color: rgb(255, 255, 255);
-  /* z-index: 1; */
-  -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: black;
-  border: 0.5px solid black;
+.descricao-card {
+  padding: 20px;
   margin-bottom: 10px;
 }
 
-.data-container {
-  background: rgba(255, 255, 255, 0.613);
-  padding: 20px;
-  border-radius: 20px;
-  margin-top: 20px;
-  border: 1px solid rgb(0, 0, 0)
+.caracteristica-card-valor {
+  background-color: transparent;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.caracteristicas {
+  color: white;
+  font-weight: 700;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-around;
+  background-color: #8bcf8bce;
+  width: 100%;
+}
+
+.caracteristicas .itens {
+  float: left;
+  padding: 20px 15px;
+  background-color: transparent;
+}
+
+.caracteristicas sup {
+  position: absolute;
+  bottom: 4px;
+  font-size: 45%;
+  margin-left: 2px;
+}
+
+.caracteristicas .caracteristica-card {
+  position: relative;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.caracteristicas .caracteristica-card-item {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+  background-color: transparent;
+}
+
+.button-card {
+  background-color: #8bcf8b42;
+  padding: 5px 10px;
 }
