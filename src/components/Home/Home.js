@@ -1,45 +1,42 @@
 import React, { useState } from "react";
-import { Routes, Route, BrowserRouter, useNavigate, useLocation } from "react-router-dom";
-// import "./App.css";
+// import {
+//   Routes,
+//   Route,
+//   BrowserRouter,
+//   useNavigate,
+//   useLocation,
+// } from "react-router-dom";
 import Card from "../Card";
 import Form from "../Form";
-
+import "./Home.css";
 
 function Home() {
- 
-  
-
   let hero = true;
-  
+
   let onDelete = () => {
     return console.log("Deletou");
   };
 
-  
-
   const [personagens, setPersonagens] = useState([]);
-
-  
 
   const handleFormSubmit = (personagem) => {
     setPersonagens((personagens) => [...personagens, personagem]);
-   
     console.log(personagens);
   };
-  
+
   // let verDetalhes = () => {
-    
+
   //   navigate('/details', { state: { personagens } })
   //   // return console.log("Clicou");
   // };
-  
+
   return (
     <div className="App">
       <Form onSubmit={handleFormSubmit} />
 
       {personagens.map((personagem, index) => (
         <Card
-          key={index} 
+          key={index}
           character={personagem}
           name={personagem.nome}
           src={personagem.urlImagem}
@@ -106,4 +103,4 @@ function Home() {
   );
 }
 
-export default Home
+export default Home;

@@ -11,20 +11,18 @@ import Description from "../Description";
 import Button from "../Button";
 import "./style.css";
 // import { Link } from "react-router-dom";
-import { Routes, Route, BrowserRouter, useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Card = (props) => {
-
-  const navigate = useNavigate()
-  const location = useLocation()
+  const navigate = useNavigate();
+  // const location = useLocation();
 
   let verDetalhes = () => {
-    
-    navigate('/details', { state: {character: props.character}  })
-    // return console.log("Clicou");
+    navigate("/details", { state: { character: props.character } });
   };
+
   return (
-    <div className="card" >
+    <div className="card">
       <Name name={props.name} />
       <Image
         src={props.src.length > 14 ? props.src : "https://iili.io/JEUVMxt.png"}
@@ -37,7 +35,7 @@ const Card = (props) => {
       <Type type={props.type} />
       <Description description={props.description} />
       <Button onClick={verDetalhes} label={props.detail} />
-      
+
       <Button onClick={props.onDelete} label={props.delete} />
     </div>
   );
