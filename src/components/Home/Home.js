@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Card from "../Card";
 import Form from "../Form";
-import "./Home.css";
+import "./styles.css";
 
 function Home() {
   const [personagens, setPersonagens] = useState([]);
