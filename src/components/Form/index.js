@@ -81,7 +81,6 @@ const Form = ({ onSubmit }) => {
       <textarea
         value={descricao}
         onChange={(e) => setDescricao(e.target.value)}
-        maxLength={24}
         required
       />
       <label>URL da Imagem:</label>

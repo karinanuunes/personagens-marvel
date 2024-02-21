@@ -71,7 +71,7 @@ function Details() {
       <div class="caracteristicas">
         <div class="itens">
           <div class="caracteristica-card-valor">
-            <p>{character.idade}</p>
+            <p>{character.idade ? character.idade + " anos" : "Indefinida"}</p>
           </div>
           <div class="caracteristica-card-item">Idade</div>
         </div>
@@ -82,7 +82,9 @@ function Details() {
         </div>
 
         <div class="itens no-border">
-          <div class="caracteristica-card-valor">{character.altura}</div>
+          <div class="caracteristica-card-valor">
+            {character.altura ? character.altura + " metros" : "Indefinida"}
+          </div>
           <div class="caracteristica-card-item">Altura</div>
         </div>
       </div>
