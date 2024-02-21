@@ -13,8 +13,11 @@ import "./Home.css";
 function Home() {
   let hero = true;
 
-  let onDelete = () => {
-    return console.log("Deletou");
+  let onDelete = (index) => {
+    let card = document.querySelectorAll(".card")[index];
+    if (card.parentNode) {
+      card.parentNode.removeChild(card);
+    }
   };
 
   const [personagens, setPersonagens] = useState([]);
@@ -49,7 +52,9 @@ function Home() {
           description={personagem.descricao}
           // onDetail={verDetalhes}
           detail="Ver detalhes"
-          onDelete={onDelete}
+          onDelete={() => {
+            onDelete(index);
+          }}
           delete="Deletar"
         />
       ))}
