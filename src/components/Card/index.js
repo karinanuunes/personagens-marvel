@@ -1,12 +1,12 @@
 import React from "react";
 // import PropTypes from "prop-types";
 import Name from "../Name";
-import Height from "../Height";
-import Age from "../Age";
-import Origin from "../Origin";
+// import Height from "../Height";
+// import Age from "../Age";
+// import Origin from "../Origin";
 import Image from "../Image";
-import Race from "../Race";
-import Type from "../Type";
+// import Race from "../Race";
+// import Type from "../Type";
 import Description from "../Description";
 import Button from "../Button";
 import "./style.css";
@@ -28,11 +28,11 @@ const Card = (props) => {
         src={props.src.length > 14 ? props.src : "https://iili.io/JEUVMxt.png"}
         alt={props.alt}
       />
-      <Height height={props.height ? props.height + " metros" : "Indefinida"} />
+      {/* <Height height={props.height ? props.height + " metros" : "Indefinida"} />
       <Age age={props.age ? props.age + " anos" : "Indefinida"} />
       <Origin origin={props.origin} />
       <Race race={props.race ? props.race : "Indefinida"} />
-      <Type type={props.type} />
+      <Type type={props.type} /> */}
       <Description description={props.description} />
       <Button onClick={verDetalhes} label={props.detail} />
 
