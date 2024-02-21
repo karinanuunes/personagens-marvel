@@ -3,40 +3,67 @@ import { Routes, Route, BrowserRouter, useNavigate, useLocation } from "react-ro
 // import "./App.css";
 import Card from "../Card";
 import Form from "../Form";
-
+import Filter from "../Filter/Filter";
+import './home.css';
 
 function Home() {
- 
-  
 
   let hero = true;
   
-  let onDelete = () => {
-    return console.log("Deletou");
+  const [personagens, setPersonagens] = useState([]);
+  const [listaFiltro, setListaFiltro] = useState([]);
+  
+  let onDelete = (name) => {
+    const newList = [...personagens];
+    const filteredList = newList.filter((e) => e.nome !== name ? e : null);
+    setPersonagens(filteredList);
+    setListaFiltro(filteredList)
+
   };
 
+  const [tipoValue, setTipoValue] = useState('todos')
   
-
-  const [personagens, setPersonagens] = useState([]);
-
+  let filterTipe = (tipo) => {    
+    
+    let beforeFilterList = [...personagens];
+    let filteredList = [];
+    if(tipo === 'heroi') {
+      filteredList = beforeFilterList.filter((e) => e.tipo === 'Herói' ? e : null);
+      setPersonagens(filteredList); 
+    } else if (tipo === 'vilao') {
+      filteredList = beforeFilterList.filter((e) => e.tipo === 'Vilão' ? e : null);
+      setPersonagens(filteredList);
+    } else if (tipo === 'todos') {
+      setPersonagens(listaFiltro);
+    }
+    console.log(personagens, tipo)
+  }
   
-
   const handleFormSubmit = (personagem) => {
     setPersonagens((personagens) => [...personagens, personagem]);
-   
-    console.log(personagens);
+    setListaFiltro((personagens) => [...personagens, personagem])
   };
-  
-  // let verDetalhes = () => {
     
-  //   navigate('/details', { state: { personagens } })
-  //   // return console.log("Clicou");
-  // };
-  
   return (
-    <div className="App">
+    <div className="">
+       
       <Form onSubmit={handleFormSubmit} />
 
+      {/* <Filter onChangeOption={() => filterTipe} /> */}
+
+      <div>
+      <select onChange={(e) => {
+        setTipoValue(e.target.value);
+        console.log(tipoValue)
+        setPersonagens(listaFiltro);
+        }}>
+        <option value='heroi'>Heroi</option>
+        <option value='vilao'>Vilao</option>
+        <option value='todos'>Todos</option>
+      </select>
+      <button onClick={() => filterTipe(tipoValue)}>Filtrar</button>
+      </div>
+      <div className="">
       {personagens.map((personagem, index) => (
         <Card
           key={index} 
@@ -52,12 +79,12 @@ function Home() {
           description={personagem.descricao}
           // onDetail={verDetalhes}
           detail="Ver detalhes"
-          onDelete={onDelete}
+          onDelete={() => onDelete(personagem.nome)}
           delete="Deletar"
         />
       ))}
 
-      <Card
+      {/* <Card
         name="Homem Aranha"
         src="https://cdn.awsli.com.br/600x700/1610/1610163/produto/177684974/poster-o-espetacular-homem-aranha-2-g-ebc6cbb4.jpg"
         alt="Homem Aranha"
@@ -69,7 +96,7 @@ function Home() {
         description="É homem e aranha"
         // onDetail={verDetalhes}
         detail="Ver detalhes"
-        onDelete={onDelete}
+        // onDelete={onDelete}
         delete="Deletar"
       />
       <Card
@@ -84,7 +111,7 @@ function Home() {
         description="Velho descongelado"
         // onDetail={verDetalhes}
         detail="Ver detalhes"
-        onDelete={onDelete}
+        // onDelete={onDelete}
         delete="Deletar"
       />
       <Card
@@ -99,9 +126,12 @@ function Home() {
         description="Velho rico"
         // onDetail={verDetalhes}
         detail="Ver detalhes"
-        onDelete={onDelete}
+        // onDelete={onDelete}
         delete="Deletar"
-      />
+      /> */}
+      </div>
+        
+      
     </div>
   );
 }

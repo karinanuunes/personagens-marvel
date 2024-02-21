@@ -30,12 +30,12 @@ const Card = (props) => {
         src={props.src.length > 14 ? props.src : "https://iili.io/JEUVMxt.png"}
         alt={props.alt}
       />
-      <Height height={props.height ? props.height + " metros" : "Indefinida"} />
-      <Age age={props.age ? props.age + " anos" : "Indefinida"} />
-      <Origin origin={props.origin} />
-      <Race race={props.race ? props.race : "Indefinida"} />
+      {/* <Height height={props.height ? props.height + " metros" : "Indefinida"} /> */}
+      {/* <Age age={props.age ? props.age + " anos" : "Indefinida"} /> */}
+      {/* <Origin origin={props.origin} /> */}
+      {/* <Race race={props.race ? props.race : "Indefinida"} /> */}
       <Type type={props.type} />
-      <Description description={props.description} />
+      {/* <Description description={props.description} /> */}
       <Button onClick={verDetalhes} label={props.detail} />
       
       <Button onClick={props.onDelete} label={props.delete} />
