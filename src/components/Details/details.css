@@ -50,6 +50,7 @@ body {
 .descricao-card {
   padding: 20px;
   margin-bottom: 10px;
+  word-wrap: break-word;
 }
 
 .caracteristica-card-valor {
