@@ -60,7 +60,14 @@ function Details() {
     // </div>
     <div className="details-card">
       <div className="image-card">
-        <img src={character.urlImagem} alt={character.nome} />
+        <img
+          src={
+            character.urlImagem.length > 14
+              ? character.urlImagem
+              : "https://iili.io/JEUVMxt.png"
+          }
+          alt={character.nome}
+        />
       </div>
       <div className="tipo-card">
         <p>{character.tipo}</p>
