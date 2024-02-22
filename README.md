@@ -1,3 +1,43 @@
+# Projeto Final - Módulo React I
+
+## Grupo
+- [Karina Nunes](https://github.com/karinanuunes);
+- [Haralan Santana](https://github.com/HaralanS);
+- [Ana Patrícia](https://github.com/ananeres);
+- [Larissa Vasconcelos](https://github.com/karinanuunes);
+
+## Objetivo
+
+Criar uma aplicação para cadastro de personagens da Marvel.
+
+## Requisitos
+
+-  Deve ter um formulário para inputar os seguintes dados:
+    - Nome (Obrigatório)
+    - Altura
+    - Idade
+    - Origem (Obrigatório)
+    - Raça
+    - Tipo (Obrigatório)
+        - Herói
+        - Vilão
+    - Descrição (Obrigatório)
+    - URL de uma imagem do personagem (Obrigatório)
+-  Deve haver uma validação dos dados obrigatórios, se não tiver todos os dados obrigatórios, não salva.
+-  Ao enviar os dados do formulário, deve exibir o card logo abaixo do formulário e limpar o formulário.
+-   Deve ser possível adicionar vários cards, criando uma grid de cards logo abaixo do formulário.
+-   Nessa grid de cards deve ser possível filtrar o personagem por `nome` ou por `tipo`.
+-   Deve ser possível remover um card das grid.
+-   Cada card deve mostrar os seguintes dados.
+    - Nome
+    - Imagem
+    - Descrição
+    - Botão "Ver detalhes"
+    - Botão "Remover”
+- Ao clicar em "Ver detalhes” deve direcionar para outra rota que mostra todos os dados do personagem.
+- Os dados não devem persistir na aplicação.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
