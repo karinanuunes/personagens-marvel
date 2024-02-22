@@ -1,10 +1,10 @@
 # Projeto Final - Módulo React I
 
 ## Grupo
-- [Karina Nunes](https://github.com/karinanuunes);
-- [Haralan Santana](https://github.com/HaralanS);
-- [Ana Patrícia](https://github.com/ananeres);
-- [Larissa Vasconcelos](https://github.com/karinanuunes);
+- [Karina Nunes](https://github.com/karinanuunes)
+- [Haralan Santana](https://github.com/HaralanS)
+- [Ana Patrícia](https://github.com/ananeres)
+- [Larissa Vasconcelos](https://github.com/Rvssa)
 
 ## Objetivo
 
